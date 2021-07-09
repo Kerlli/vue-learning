@@ -1,16 +1,19 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <Counter/>
+  <Binding/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Counter from './components/Counter.vue'
+import Binding from './components/Binding.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     Counter,
+    Binding,
   }
 })
 </script>
