@@ -13,6 +13,16 @@
   <h3>Batch v-model</h3>
   <BatchModel v-model:first-name.trim.capitalize="firstName" v-model:last-name.trim.capitalize="lastName" />
   <pre>{{ `${firstName} ${lastName}` }}</pre>
+  <FetchData/>
+  <Provider>
+    <Middle>
+      <Consumer/>
+    </Middle>
+  </Provider>
+  <NewFeatures
+    :firstName="'Broke'"
+    :lastName="'Clane'"
+  />
 </template>
 
 <script lang="ts">
@@ -24,6 +34,11 @@ import VModelInput from './components/VModelInput.vue'
 import SelectDemo from './components/SelectDemo.vue'
 import NoInheritAttr from './components/NoInheritAttr.vue'
 import BatchModel from './components/BatchModel.vue'
+import Provider from './components/ProvideAndInject/Provider.vue'
+import Middle from './components/ProvideAndInject/Middle.vue'
+import Consumer from './components/ProvideAndInject/Consumer.vue'
+import FetchData from './components/FetchData.vue'
+import NewFeatures from './components/CompositionAPI/NewFeatures.vue'
 
 export default defineComponent({
   name: 'App',
@@ -43,6 +58,11 @@ export default defineComponent({
     VModelInput,
     SelectDemo,
     NoInheritAttr,
+    Provider,
+    Middle,
+    Consumer,
+    FetchData,
+    NewFeatures,
   },
   methods: {
     onSelectChange(e) {

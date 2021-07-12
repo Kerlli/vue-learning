@@ -12,5 +12,10 @@ export default {
 </script>
 
 <style scoped>
-
+  div.middle {
+    width: 360px;
+    height: 220px;
+    margin: 16px auto;
+    background-color: brown;
+  }
 </style>
